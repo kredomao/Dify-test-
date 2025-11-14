@@ -100,30 +100,5 @@ model_config:
     enabled: false
     language: ''
     voice: ''
-  user_input_form:
-  - text-input:
-      default: ''
-      label: question
-      required: true
-      variable: question
-  - text-input:
-      default: ''
-      label: knowledge_base
-      required: true
-      variable: knowledge_base
-  - text-input:
-      default: ''
-      label: brief_answer
-      required: true
-      variable: brief_answer
-  - text-input:
-      default: ''
-      label: detailed_explanation
-      required: true
-      variable: detailed_explanation
-  - text-input:
-      default: ''
-      label: document_reference
-      required: true
-      variable: document_reference
+  user_input_form: []
 version: 0.4.0
