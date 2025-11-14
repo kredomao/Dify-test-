@@ -1,0 +1,129 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: chat
+  name: Dify test chat
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai:0.2.6@e2665624a156f52160927bceac9e169bd7e5ae6b936ae82575e14c90af390e6e
+    version: null
+kind: app
+model_config:
+  agent_mode:
+    enabled: false
+    max_iteration: 10
+    strategy: function_call
+    tools: []
+  annotation_reply:
+    enabled: false
+  chat_prompt_config: {}
+  completion_prompt_config: {}
+  dataset_configs:
+    datasets:
+      datasets:
+      - dataset:
+          enabled: true
+          id: eed03714-3584-40de-bc18-b18a5624154c
+    reranking_enable: false
+    reranking_mode: weighted_score
+    reranking_model:
+      reranking_model_name: ''
+      reranking_provider_name: ''
+    retrieval_model: multiple
+    top_k: 5
+    weights:
+      keyword_setting:
+        keyword_weight: 0
+      vector_setting:
+        embedding_model_name: text-embedding-3-large
+        embedding_provider_name: langgenius/openai/openai
+        vector_weight: 1
+      weight_type: customized
+  dataset_query_variable: ''
+  external_data_tools: []
+  file_upload:
+    allowed_file_extensions:
+    - .JPG
+    - .JPEG
+    - .PNG
+    - .GIF
+    - .WEBP
+    - .SVG
+    - .MP4
+    - .MOV
+    - .MPEG
+    - .WEBM
+    allowed_file_types: []
+    allowed_file_upload_methods:
+    - remote_url
+    - local_file
+    enabled: false
+    image:
+      detail: high
+      enabled: false
+      number_limits: 3
+      transfer_methods:
+      - remote_url
+      - local_file
+    number_limits: 3
+  model:
+    completion_params:
+      stop: []
+    mode: chat
+    name: gpt-4o
+    provider: langgenius/openai/openai
+  more_like_this:
+    enabled: false
+  opening_statement: "【結論】 \n- 皆さん、こんにちは！私は〇〇会社の公式サポートボットです。 \n\n【根拠】 \n- 私の主な目的は、皆さんが抱いている疑問や問題を解決することです。質問がある方は何でも聞いてください。私が知識ベースの情報を元に最善の回答を提供します。情報が不足している場合や全ての情報を提供できない時は、正直にその旨をお伝えします。\
+    \ \n\n【出典】 \n- 会社の公式ナレッジベース"
+  pre_prompt: "あなたは〇〇会社の公式サポートボットです。以下のルールに従って回答してください：\n\n1. 提供されたナレッジベースの情報のみを使用して回答してください\n\
+    2. 回答は必ず以下の構成で出力してください：\n   【結論】\n   - 質問に対する簡潔な答え\n   \n   【根拠】\n   - 結論を導いた理由や詳細説明\n\
+    \   - 関連する具体的な情報\n   \n   【出典】\n   - 参照したドキュメント名やセクション\n\n3. 情報が不足している場合は、正直にその旨を伝えてください\n\
+    4. 丁寧で分かりやすい言葉遣いを心がけてください"
+  prompt_type: simple
+  retriever_resource:
+    enabled: true
+  sensitive_word_avoidance:
+    configs: []
+    enabled: false
+    type: ''
+  speech_to_text:
+    enabled: false
+  suggested_questions: []
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form:
+  - text-input:
+      default: ''
+      label: question
+      required: true
+      variable: question
+  - text-input:
+      default: ''
+      label: knowledge_base
+      required: true
+      variable: knowledge_base
+  - text-input:
+      default: ''
+      label: brief_answer
+      required: true
+      variable: brief_answer
+  - text-input:
+      default: ''
+      label: detailed_explanation
+      required: true
+      variable: detailed_explanation
+  - text-input:
+      default: ''
+      label: document_reference
+      required: true
+      variable: document_reference
+version: 0.4.0

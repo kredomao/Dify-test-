@@ -1,0 +1,12 @@
+{
+  "version": "0.1.1",
+  "kind": "app",
+  "app": {
+    "mode": "advanced-chat",
+    "name": "Support Chatbot",
+    "description": "Knowledge base support bot",
+    "icon": "robot",
+    "icon_background": "#2196F3"
+  }
+}
+
